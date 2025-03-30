@@ -1,12 +1,14 @@
 
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { Briefcase, Star } from "lucide-react";
 
 type JobType = {
   company: string;
   title: string;
   date: string;
   points: string[];
+  highlight?: boolean;
 };
 
 const Experience = () => {
@@ -17,36 +19,36 @@ const Experience = () => {
       company: "Devslane",
       title: "Senior Software Developer",
       date: "May 2023 - Present",
+      highlight: true,
       points: [
-        "Worked with other teams to onboard three new clients, streamlining the integration process and improving client experience.",
-        "Architected and implemented a data ingestion pipeline that reduced manual intervention, increased efficiency by 100x, and cut down a 4-day process to just 3-4 hours.",
-        "Led a dynamic team of 7 engineers, fostering a collaborative environment and ensuring streamlined communication to achieve project goals.",
-        "Actively involved in designing and implementing distributed systems, focusing on scalability, reliability, and fault tolerance.",
-        "Built end-to-end AWS infrastructure to support the multi-tenant architecture, ensuring robust and scalable cloud deployment.",
-        "Collaborated closely with stakeholders to thoroughly understand their requirements, gathering valuable insights and feedback to inform the development process.",
-        "Successfully managed the end-to-end delivery of features, from initial concept to production deployment, ensuring alignment with stakeholder expectations and project timelines.",
-        "Developed and executed comprehensive project plans, breaking down complex features into manageable tasks and delegating responsibilities to team members for efficient delivery.",
-        "Provided mentorship and guidance to team members, fostering a culture of continuous learning and skill development within the engineering team.",
-        "Provided technical guidance to team members throughout the mvp of multi-tenant architecture implementation with a focus on efficient data ingestion strategies.",
-        "Developed and implemented a high-performance search engine using Elasticsearch, significantly improving data retrieval speed and search accuracy.",
+        "Led development of a property management platform similar to Airbnb and VRBO, focusing on seamless user experience and robust backend systems.",
+        "Architected and implemented a data ingestion pipeline for property listings that reduced manual intervention, increased efficiency by 100x, and cut down a 4-day process to just 3-4 hours.",
+        "Built end-to-end AWS infrastructure to support multi-tenant architecture for property management software, ensuring each property manager's data remains isolated and secure.",
+        "Developed a high-performance search engine using Elasticsearch for property listings, significantly improving search speed and accuracy for users looking for accommodations.",
+        "Implemented a dynamic pricing algorithm that automatically adjusts property rates based on demand, season, and local events.",
+        "Created a reservation system capable of handling complex booking scenarios, cancellations, and payment processing.",
+        "Led a dynamic team of 7 engineers, fostering a collaborative environment while developing property management features.",
+        "Collaborated closely with stakeholders to understand specific requirements for vacation rental and property management solutions.",
+        "Provided mentorship and guidance to team members on best practices for building scalable property management applications.",
+        "Successfully managed end-to-end delivery of features from initial concept to production deployment, ensuring alignment with property management industry standards.",
       ],
     },
     {
       company: "Devslane",
       title: "Software Developer (Intern)",
       date: "August 2021 - May 2023",
+      highlight: true,
       points: [
-        "Managed resource-intensive background processes efficiently through the implementation of a robust bull message queue.",
-        "Oversaw the maintenance of both production and staging servers, ensuring seamless operations and minimal downtime.",
-        "Played a pivotal role in the development workflow by diligently reviewing and merging pull requests (MRs) from team members.",
-        "Enhanced website performance and search engine ranking by transitioning the front-end from client-side rendering to optimized server-side rendering.",
-        "Successfully integrated Stripe payment solutions, handling monthly transactions totaling in the millions.",
-        "Implemented robust multi-factor authentication mechanisms, fortifying the security posture of the system.",
-        "Streamlined resource-intensive processes by leveraging serverless lambda functions, optimizing efficiency and scalability.",
-        "Engineered high-performance RESTful APIs using Adonisjs and implemented Redis caching, resulting in a substantial performance boost of 75-80 percent.",
-        "Created comprehensive API documentation for RESTful services, ensuring clarity and accessibility for development teams.",
-        "Utilized Lucid ORM for seamless database management, including migrations and model class creation.",
-        "Integrated the front-end application with RESTful APIs and executed extensive code refactoring to enhance overall system coherence.",
+        "Assisted in developing key components for a property management application, including booking calendar optimization and availability tracking.",
+        "Managed resource-intensive background processes for property data synchronization through the implementation of a robust bull message queue.",
+        "Enhanced website performance and search engine ranking for property listings by transitioning the front-end from client-side rendering to optimized server-side rendering.",
+        "Successfully integrated Stripe payment solutions for processing rental payments, handling monthly transactions totaling in the millions.",
+        "Implemented robust multi-factor authentication mechanisms for property owners and managers, fortifying the security posture of the system.",
+        "Streamlined resource-intensive processes related to property data aggregation by leveraging serverless lambda functions.",
+        "Engineered high-performance RESTful APIs using Adonisjs and implemented Redis caching for property data, resulting in a substantial performance boost of 75-80 percent.",
+        "Created comprehensive API documentation for property management services, ensuring clarity and accessibility for development teams.",
+        "Utilized Lucid ORM for seamless property database management, including migrations and model class creation.",
+        "Integrated the front-end application with property management RESTful APIs and executed extensive code refactoring to enhance overall system coherence.",
       ],
     },
     {
@@ -54,13 +56,13 @@ const Experience = () => {
       title: "Co-founder",
       date: "January 2024 - December 2024",
       points: [
-        "Led the technology department, overseeing mobile, web, and backend development.",
-        "Participated in VC meetings and prepared comprehensive pitch decks, effectively communicating the product vision and technical strategy.",
-        "Spearheaded the recruitment process, successfully hiring and onboarding talented developers to expand the team.",
-        "Architected a cost-effective infrastructure, optimizing resource utilization and minimizing operational expenses.",
-        "Designed and built the complete first final version of the product with the team.",
-        "Guided team members in writing clean and modular code, promoting best practices.",
-        "Translated business requirements into technical solutions, ensuring product alignment with company goals.",
+        "Led the technology department for a property management startup, overseeing mobile, web, and backend development.",
+        "Participated in VC meetings and prepared comprehensive pitch decks, effectively communicating the product vision for our property management solution.",
+        "Spearheaded the recruitment process, successfully hiring and onboarding talented developers to expand the property management platform team.",
+        "Architected a cost-effective infrastructure for our property management system, optimizing resource utilization and minimizing operational expenses.",
+        "Designed and built the complete first version of our property booking and management platform with the team.",
+        "Guided team members in writing clean and modular code for developing property management features, promoting best practices.",
+        "Translated business requirements into technical solutions for property management, ensuring product alignment with company goals.",
       ],
     },
   ];
@@ -71,6 +73,13 @@ const Experience = () => {
         <h2 className="section-heading numbered-heading mb-12">
           Where I've Worked
         </h2>
+        
+        <div className="flex items-center gap-2 mb-6">
+          <Briefcase className="text-accent" />
+          <p className="text-slate-light italic">
+            Specialized in <span className="text-accent font-medium">property management software</span> similar to Airbnb, VRBO and MBP
+          </p>
+        </div>
 
         <div className="flex flex-col md:flex-row gap-8">
           {/* Tab list */}
@@ -80,13 +89,14 @@ const Experience = () => {
                 <button
                   key={i}
                   className={cn(
-                    "px-4 py-3 font-mono text-sm whitespace-nowrap transition-all border-b-2 md:border-b-0 md:border-l-2",
+                    "px-4 py-3 font-mono text-sm whitespace-nowrap transition-all border-b-2 md:border-b-0 md:border-l-2 flex items-center gap-2",
                     activeTabIndex === i
-                      ? "text-accent border-accent bg-navy-light md:bg-transparent"
-                      : "text-slate border-slate-dark hover:text-accent hover:bg-navy-light/30"
+                      ? "text-accent border-accent bg-secondary md:bg-transparent"
+                      : "text-slate border-slate-dark hover:text-accent hover:bg-secondary/30"
                   )}
                   onClick={() => setActiveTabIndex(i)}
                 >
+                  {job.highlight && <Star className="w-3 h-3 text-accent opacity-75" />}
                   {job.company}
                 </button>
               ))}

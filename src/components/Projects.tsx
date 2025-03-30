@@ -1,5 +1,6 @@
+
 import React from "react";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, Rocket, Star } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 type ProjectType = {
@@ -11,10 +12,21 @@ type ProjectType = {
     external?: string;
   };
   image?: string;
+  sideProject?: boolean;
 };
 
 const Projects = () => {
   const featuredProjects: ProjectType[] = [
+    {
+      title: "Property Management Platform",
+      description:
+        "A comprehensive property management solution similar to Airbnb and VRBO. Features include booking management, dynamic pricing, property listings, guest communication, and payment processing.",
+      tags: ["React", "Node.js", "AWS", "Elasticsearch", "PostgreSQL"],
+      links: {
+        external: "#",
+      },
+      sideProject: false,
+    },
     {
       title: "Lesgo.in",
       description:
@@ -23,6 +35,7 @@ const Projects = () => {
       links: {
         external: "https://lesgo.in",
       },
+      sideProject: true,
     },
     {
       title: "Author-Writer-Reader Platform",
@@ -32,6 +45,42 @@ const Projects = () => {
       links: {
         github: "https://github.com/pratham-kumar-jr/writer-platform",
       },
+      sideProject: true,
+    },
+  ];
+
+  const otherProjects: ProjectType[] = [
+    {
+      title: "Vacation Rental Analytics Dashboard",
+      description:
+        "An analytics dashboard for property managers to track occupancy rates, revenue, and guest satisfaction. Provides insights to optimize pricing and marketing strategies.",
+      tags: ["React", "D3.js", "Express", "MongoDB"],
+      links: {
+        github: "#",
+        external: "#",
+      },
+      sideProject: false,
+    },
+    {
+      title: "React-Redux Dashboard",
+      description:
+        "Created a React-Redux-Tailwind CSS app with integrated RESTful API, featuring a dashboard, login functionality, and a storybook for reusable components.",
+      tags: ["React", "Redux", "Tailwind CSS", "Storybook"],
+      links: {
+        github: "#",
+        external: "https://dashboard-demo.prathamkumar.com",
+      },
+      sideProject: true,
+    },
+    {
+      title: "Instable 2020",
+      description:
+        "A 2D platformer game themed around the Corona-Pandemic. Published on the PlayStore and developed using Unity game engine.",
+      tags: ["Unity", "C#", "Game Development", "Android"],
+      links: {
+        external: "https://play.google.com/store/apps/details?id=com.pratham.instable",
+      },
+      sideProject: true,
     },
     {
       title: "Skribble Game",
@@ -42,28 +91,7 @@ const Projects = () => {
         github: "https://github.com/pratham-kumar-jr/skribble-game",
         external: "#",
       },
-    },
-  ];
-
-  const otherProjects: ProjectType[] = [
-    {
-      title: "React-Redux Dashboard",
-      description:
-        "Created a React-Redux-Tailwind CSS app with integrated RESTful API, featuring a dashboard, login functionality, and a storybook for reusable components.",
-      tags: ["React", "Redux", "Tailwind CSS", "Storybook"],
-      links: {
-        github: "#",
-        external: "https://dashboard-demo.prathamkumar.com",
-      },
-    },
-    {
-      title: "Instable 2020",
-      description:
-        "A 2D platformer game themed around the Corona-Pandemic. Published on the PlayStore and developed using Unity game engine.",
-      tags: ["Unity", "C#", "Game Development", "Android"],
-      links: {
-        external: "https://play.google.com/store/apps/details?id=com.pratham.instable",
-      },
+      sideProject: true,
     },
   ];
 
@@ -71,6 +99,18 @@ const Projects = () => {
     <section id="work" className="py-24 px-6">
       <div className="container mx-auto">
         <h2 className="section-heading numbered-heading mb-16">Some Things I've Built</h2>
+
+        {/* Legend */}
+        <div className="flex justify-end gap-6 mb-12 text-sm">
+          <div className="flex items-center gap-2">
+            <Star className="w-4 h-4 text-primary" />
+            <span className="text-slate">Main Projects</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Rocket className="w-4 h-4 text-accent" />
+            <span className="text-slate">Side Projects</span>
+          </div>
+        </div>
 
         {/* Featured Projects */}
         <div className="space-y-24 mb-24">
@@ -89,7 +129,7 @@ const Projects = () => {
                   i % 2 === 0 ? "md:order-2" : "md:order-1"
                 )}
               >
-                <div className="bg-accent/10 aspect-video flex items-center justify-center border border-accent/20">
+                <div className="glass-card aspect-video flex items-center justify-center border border-accent/20">
                   <div className="text-center font-mono text-accent/50">
                     Project Screenshot
                   </div>
@@ -103,10 +143,17 @@ const Projects = () => {
                   i % 2 === 0 ? "md:text-left" : "md:col-start-7 md:text-right"
                 )}
               >
-                <div className="p-6 rounded-md bg-navy-light shadow-xl">
-                  <p className="font-mono text-accent text-sm mb-2">
-                    Featured Project
-                  </p>
+                <div className="glass-card p-6 rounded-md shadow-xl">
+                  <div className="flex items-center mb-2">
+                    <p className="font-mono text-accent text-sm">
+                      Featured Project
+                    </p>
+                    {project.sideProject ? (
+                      <Rocket className="w-4 h-4 text-accent ml-2" />
+                    ) : (
+                      <Star className="w-4 h-4 text-primary ml-2" />
+                    )}
+                  </div>
                   <h3 className="text-2xl font-semibold mb-4">
                     {project.title}
                   </h3>
@@ -120,7 +167,7 @@ const Projects = () => {
                     )}
                   >
                     {project.tags.map((tag, j) => (
-                      <li key={j} className="bg-navy-dark px-3 py-1 rounded">
+                      <li key={j} className="bg-secondary px-3 py-1 rounded">
                         {tag}
                       </li>
                     ))}
@@ -166,13 +213,17 @@ const Projects = () => {
           {otherProjects.map((project, i) => (
             <div
               key={i}
-              className="bg-navy-light p-6 rounded-md shadow-md hover:transform hover:-translate-y-2 transition-transform duration-300"
+              className="glass-card p-6 rounded-md shadow-md hover:transform hover:-translate-y-2 transition-transform duration-300"
             >
               <div className="flex justify-between items-center mb-6">
                 <div className="text-accent">
-                  {/* Icon placeholder */}
+                  {/* Icon based on project type */}
                   <div className="w-10 h-10 rounded-full border-2 border-accent flex items-center justify-center">
-                    <span className="text-xl">🚀</span>
+                    {project.sideProject ? (
+                      <Rocket className="text-accent w-5 h-5" />
+                    ) : (
+                      <Star className="text-primary w-5 h-5" />
+                    )}
                   </div>
                 </div>
                 <div className="flex gap-4">

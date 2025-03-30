@@ -37,9 +37,11 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="bg-navy min-h-screen">
+    <div className="bg-background min-h-screen">
+      <div className="fixed inset-0 bg-[url('/bg-grid.svg')] bg-repeat opacity-5 pointer-events-none" />
+      <div className="fixed inset-0 bg-gradient-to-b from-background via-background to-background/90 pointer-events-none" />
       <Navbar />
-      <main className="pt-0">
+      <main className="relative z-10 pt-0">
         <Hero />
         <About />
         <Experience />
