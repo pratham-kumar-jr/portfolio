@@ -19,7 +19,7 @@ const Hero = () => {
           I build <span className="gradient-text">property management</span> software.
         </h3>
         <p className="max-w-xl text-slate text-lg mb-12 leading-relaxed">
-          I'm a senior software developer specializing in building exceptional
+          I'm a software developer specializing in building exceptional
           property management platforms similar to{" "}
           <span className="text-accent">Airbnb</span>,{" "}
           <span className="text-accent">VRBO</span>, and{" "}

@@ -1,4 +1,3 @@
-
 import React, { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
@@ -12,7 +11,7 @@ import Email from "@/components/Email";
 
 const Index = () => {
   useEffect(() => {
-    document.title = "Pratham Kumar | Senior Software Developer";
+    document.title = "Pratham Kumar | Software Developer";
     
     // Add smooth scrolling for anchor links
     const handleAnchorClick = (e: MouseEvent) => {
