@@ -1,19 +1,32 @@
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
 import { Github, Linkedin, Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
+
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node) && isMenuOpen) {
+        setIsMenuOpen(false);
+      }
+    };
+
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isMenuOpen]);
 
   const navLinks = [
     { name: "About", url: "#about" },
@@ -51,9 +64,8 @@ const Navbar = () => {
           </ol>
           <a
             href="/resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
             className="button-primary"
+            onClick={(e) => e.preventDefault()}
           >
             Resume
           </a>
@@ -71,6 +83,7 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       <div
+        ref={menuRef}
         className={cn(
           "fixed inset-y-0 right-0 bg-navy-light w-3/4 shadow-xl p-6 transform transition-transform duration-300 ease-in-out md:hidden z-50",
           isMenuOpen ? "translate-x-0" : "translate-x-full"
@@ -94,10 +107,11 @@ const Navbar = () => {
           <div className="flex justify-center">
             <a
               href="/resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
               className="button-primary"
-              onClick={() => setIsMenuOpen(false)}
+              onClick={(e) => {
+                e.preventDefault();
+                setIsMenuOpen(false);
+              }}
             >
               Resume
             </a>

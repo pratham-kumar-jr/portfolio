@@ -13,6 +13,27 @@ import Email from "@/components/Email";
 const Index = () => {
   useEffect(() => {
     document.title = "Pratham Kumar | Senior Software Developer";
+    
+    // Add smooth scrolling for anchor links
+    const handleAnchorClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      if (target.tagName === 'A' && target.getAttribute('href')?.startsWith('#')) {
+        e.preventDefault();
+        const id = target.getAttribute('href')?.substring(1);
+        const element = document.getElementById(id || '');
+        if (element) {
+          element.scrollIntoView({
+            behavior: 'smooth'
+          });
+        }
+      }
+    };
+    
+    document.addEventListener('click', handleAnchorClick);
+    
+    return () => {
+      document.removeEventListener('click', handleAnchorClick);
+    };
   }, []);
 
   return (

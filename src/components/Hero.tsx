@@ -31,7 +31,16 @@ const Hero = () => {
           </a>
           .
         </p>
-        <a href="#work" className="button-primary inline-block text-base py-3 px-6">
+        <a 
+          href="#work" 
+          className="button-primary inline-block text-base py-3 px-6"
+          onClick={(e) => {
+            e.preventDefault();
+            document.getElementById('work')?.scrollIntoView({
+              behavior: 'smooth'
+            });
+          }}
+        >
           Check out my work!
         </a>
       </div>
