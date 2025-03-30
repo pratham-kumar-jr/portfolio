@@ -1,6 +1,5 @@
 
 import { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Github, Linkedin, Menu, X } from "lucide-react";
 
@@ -64,6 +63,7 @@ const Navbar = () => {
         <button
           className="md:hidden text-slate-light"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Toggle menu"
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -72,7 +72,7 @@ const Navbar = () => {
       {/* Mobile Navigation */}
       <div
         className={cn(
-          "fixed inset-y-0 right-0 bg-navy-light w-3/4 shadow-xl p-6 transform transition-transform duration-300 ease-in-out md:hidden",
+          "fixed inset-y-0 right-0 bg-navy-light w-3/4 shadow-xl p-6 transform transition-transform duration-300 ease-in-out md:hidden z-50",
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         )}
       >

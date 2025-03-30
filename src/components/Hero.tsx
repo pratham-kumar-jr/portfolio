@@ -1,6 +1,5 @@
 
 import React from "react";
-import { Button } from "@/components/ui/button";
 
 const Hero = () => {
   return (
@@ -32,7 +31,7 @@ const Hero = () => {
           </a>
           .
         </p>
-        <a href="#work" className="button-primary inline-block text-base">
+        <a href="#work" className="button-primary inline-block text-base py-3 px-6">
           Check out my work!
         </a>
       </div>
