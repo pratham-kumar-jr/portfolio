@@ -117,7 +117,7 @@ const About = () => {
               <div className="w-full md:h-[40rem] h-[24rem] bg-gray-300">
                 {/* This is where a profile photo would go */}
                 <img
-                  src="/profile.jpg"
+                  src="/portfolio/profile.jpg"
                   className="flex items-center justify-center glass-card text-slate-light h-full w-full"
                 ></img>
               </div>
