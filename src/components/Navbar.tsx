@@ -1,4 +1,3 @@
-
 import { useState, useEffect, useRef } from "react";
 import { cn } from "@/lib/utils";
 import { Github, Linkedin, Menu, X } from "lucide-react";
@@ -14,7 +13,11 @@ const Navbar = () => {
     };
 
     const handleClickOutside = (event: MouseEvent) => {
-      if (menuRef.current && !menuRef.current.contains(event.target as Node) && isMenuOpen) {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(event.target as Node) &&
+        isMenuOpen
+      ) {
         setIsMenuOpen(false);
       }
     };
@@ -63,9 +66,9 @@ const Navbar = () => {
             ))}
           </ol>
           <a
-            href="/resume.pdf"
+            href="/_Pratham_kumar_2025_08_.pdf"
             className="button-primary"
-            onClick={(e) => e.preventDefault()}
+            download={"Pratham_Kumar_Resume"}
           >
             Resume
           </a>
@@ -106,10 +109,10 @@ const Navbar = () => {
           </ol>
           <div className="flex justify-center">
             <a
-              href="/resume.pdf"
+              href="/_Pratham_kumar_2025_08_.pdf"
               className="button-primary"
+              download={"Pratham_Kumar_Resume"}
               onClick={(e) => {
-                e.preventDefault();
                 setIsMenuOpen(false);
               }}
             >
@@ -118,9 +121,10 @@ const Navbar = () => {
           </div>
           <div className="flex justify-center gap-5 mt-8">
             <a
-              href="https://github.com/pratham-kumar-jr"
+              href="/_Pratham_kumar_2025_08_.pdf"
               target="_blank"
               rel="noopener noreferrer"
+              download={"Pratham_Kumar_Resume"}
               className="text-slate hover:text-accent transition-colors"
             >
               <Github size={22} />

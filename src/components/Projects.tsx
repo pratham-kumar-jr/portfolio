@@ -1,4 +1,3 @@
-
 import React from "react";
 import { ExternalLink, Github, Rocket, Star } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -21,10 +20,24 @@ const Projects = () => {
       title: "Vacation Rental Management System",
       description:
         "Architected a vacation rental property management system with multi-channel integrations (Airbnb, Vrbo, BookingPal), inventory sync, pricing automation, and tenant access. Built multi-tenant AWS infrastructure supporting 1M+ monthly transactions with 99.9% uptime.",
-      tags: ["Node.js", "AWS", "Elasticsearch", "Redis", "Spring Boot"],
-      links: {
-        external: "#",
-      },
+      tags: [
+        "React",
+        "AWS",
+        "Elasticsearch",
+        "Redis",
+        "Adonisjs",
+        "Redux",
+        "Redis",
+        "Lambda",
+        "Dynamo DB",
+        "Gen AI",
+        "Distributed System",
+        "Multi Tenet System",
+        "PostgresSql",
+        "Lambda",
+        "AWS Infra",
+      ],
+      links: {},
       sideProject: false,
     },
     {
@@ -43,7 +56,7 @@ const Projects = () => {
         "Created real-time multiplayer drawing game using WebSocket, Express, and React. Implemented CI/CD using GitHub Actions to streamline deployment.",
       tags: ["WebSocket", "React", "Express", "GitHub Actions"],
       links: {
-        github: "https://github.com/pratham-kumar-jr/skribble-game",
+        github: "https://github.com/pratham-kumar-jr/skribl",
       },
       sideProject: true,
     },
@@ -51,34 +64,12 @@ const Projects = () => {
 
   const otherProjects: ProjectType[] = [
     {
-      title: "Vacation Rental Analytics Dashboard",
-      description:
-        "An analytics dashboard for property managers to track occupancy rates, revenue, and guest satisfaction. Provides insights to optimize pricing and marketing strategies.",
-      tags: ["React", "D3.js", "Express", "MongoDB"],
-      links: {
-        github: "#",
-        external: "#",
-      },
-      sideProject: false,
-    },
-    {
-      title: "React-Redux Dashboard",
-      description:
-        "Created a React-Redux-Tailwind CSS app with integrated RESTful API, featuring a dashboard, login functionality, and a storybook for reusable components.",
-      tags: ["React", "Redux", "Tailwind CSS", "Storybook"],
-      links: {
-        github: "#",
-        external: "https://dashboard-demo.prathamkumar.com",
-      },
-      sideProject: true,
-    },
-    {
       title: "Instable 2020",
       description:
         "A 2D platformer game themed around the Corona-Pandemic. Published on the PlayStore and developed using Unity game engine.",
       tags: ["Unity", "C#", "Game Development", "Android"],
       links: {
-        external: "https://play.google.com/store/apps/details?id=com.pratham.instable",
+        external: "https://youtu.be/nV33rBz83YI?si=8ODEPgDS2HtHlFLE",
       },
       sideProject: true,
     },
@@ -86,10 +77,19 @@ const Projects = () => {
       title: "Skribble Game",
       description:
         "A multiplayer drawing and guessing game built with web sockets. Players take turns drawing while others guess what's being drawn. Implemented with a clean, modular architecture.",
-      tags: ["WebSockets", "React", "Game Development", "Node.js"],
+      tags: ["WebSockets", "React", "Node.js"],
       links: {
-        github: "https://github.com/pratham-kumar-jr/skribble-game",
-        external: "#",
+        github: "https://github.com/pratham-kumar-jr/skribl",
+        external: "https://skribble-app.netlify.app/",
+      },
+      sideProject: true,
+    },
+    {
+      title: "Collection of Unity Games",
+      description: "Built some causal games based on Unity",
+      tags: ["Unity", "C#"],
+      links: {
+        github: "https://github.com/pratham-kumar-jr/Unity",
       },
       sideProject: true,
     },
@@ -98,7 +98,9 @@ const Projects = () => {
   return (
     <section id="work" className="py-24 px-6">
       <div className="container mx-auto">
-        <h2 className="section-heading numbered-heading mb-16">Some Things I've Built</h2>
+        <h2 className="section-heading numbered-heading mb-16">
+          Some Things I've Built
+        </h2>
 
         {/* Legend */}
         <div className="flex justify-end gap-6 mb-12 text-sm">
