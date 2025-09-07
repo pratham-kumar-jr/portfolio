@@ -11,7 +11,7 @@ import Email from "@/components/Email";
 
 const Index = () => {
   useEffect(() => {
-    document.title = "Pratham Kumar | Software Developer";
+    document.title = "Pratham Kumar | Software Engineer";
     
     // Add smooth scrolling for anchor links
     const handleAnchorClick = (e: MouseEvent) => {

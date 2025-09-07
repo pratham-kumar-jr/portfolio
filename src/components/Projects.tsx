@@ -18,32 +18,32 @@ type ProjectType = {
 const Projects = () => {
   const featuredProjects: ProjectType[] = [
     {
-      title: "Property Management Platform",
+      title: "Vacation Rental Management System",
       description:
-        "A comprehensive property management solution similar to Airbnb and VRBO. Features include booking management, dynamic pricing, property listings, guest communication, and payment processing.",
-      tags: ["React", "Node.js", "AWS", "Elasticsearch", "PostgreSQL"],
+        "Architected a vacation rental property management system with multi-channel integrations (Airbnb, Vrbo, BookingPal), inventory sync, pricing automation, and tenant access. Built multi-tenant AWS infrastructure supporting 1M+ monthly transactions with 99.9% uptime.",
+      tags: ["Node.js", "AWS", "Elasticsearch", "Redis", "Spring Boot"],
       links: {
         external: "#",
       },
       sideProject: false,
     },
     {
-      title: "Lesgo.in",
+      title: "Lesgo (SaaS Platform)",
       description:
-        "A comprehensive SaaS platform available on iOS and Android that I co-founded and led the technical development for. Built with React Native, NodeJS, and AWS infrastructure.",
-      tags: ["React Native", "NodeJS", "AWS", "Mobile Apps", "SaaS"],
+        "Founded and led development of a loyalty SaaS platform used by 25+ restaurants and 1,000+ users. Built backend with TypeScript, AdonisJS, and AWS with 99.8% uptime. Optimized infrastructure and cut AWS costs by 25%.",
+      tags: ["TypeScript", "AdonisJS", "AWS", "Lambda", "iOS", "Android"],
       links: {
         external: "https://lesgo.in",
       },
       sideProject: true,
     },
     {
-      title: "Author-Writer-Reader Platform",
+      title: "Skribble Game (Open Source)",
       description:
-        "Currently developing an MVP for a platform connecting authors, writers, and readers. The platform facilitates content creation, sharing, and discovery within a dedicated community.",
-      tags: ["React", "TypeScript", "Node.js", "PostgreSQL"],
+        "Created real-time multiplayer drawing game using WebSocket, Express, and React. Implemented CI/CD using GitHub Actions to streamline deployment.",
+      tags: ["WebSocket", "React", "Express", "GitHub Actions"],
       links: {
-        github: "https://github.com/pratham-kumar-jr/writer-platform",
+        github: "https://github.com/pratham-kumar-jr/skribble-game",
       },
       sideProject: true,
     },

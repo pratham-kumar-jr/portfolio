@@ -5,25 +5,33 @@ import { Building, Code } from "lucide-react";
 const About = () => {
   const skills = [
     "TypeScript",
-    "JavaScript",
+    "JavaScript", 
     "Node.js",
     "PostgreSQL",
     "C++",
+    "Java",
+    "AdonisJS",
     "React",
     "Redux",
     "Redux-Saga",
-    "Mobx",
-    "AdonisJs",
-    "Bull MQ",
-    "Tailwind",
-    "NextJS",
+    "MobX",
+    "BullMQ",
+    "Tailwind CSS",
+    "Next.js",
     "React Native",
-    "AWS-Infra",
-    "Open-search",
+    "Spring Boot",
+    "AWS Infrastructure",
+    "Serverless Framework",
+    "GitHub Actions",
+    "Lambda",
+    "OpenSearch",
     "Redis",
-    "Lambdas",
-    "Serverless",
-    "Unity"
+    "Redis Streams",
+    "Stripe",
+    "Unity",
+    "Kafka",
+    "K6",
+    "gRPC"
   ];
 
   return (
@@ -36,20 +44,16 @@ const About = () => {
             <div className="space-y-4 text-slate">
               <div className="flex items-center gap-2 mb-4">
                 <Building className="text-accent h-5 w-5" />
-                <h3 className="text-slate-light font-mono text-lg">Property Management Specialist</h3>
+                <h3 className="text-slate-light font-mono text-lg">Software Engineer</h3>
               </div>
               
               <p>
-                Hello! My name is Pratham and I specialize in building robust property management 
-                software solutions similar to platforms like <span className="text-accent">Airbnb</span>,{" "}
-                <span className="text-accent">VRBO</span>, and <span className="text-accent">MBP</span>.
+                Hello! I'm Pratham, a software engineer with 4 years of experience (2 years full-time + 2 years internship) building scalable distributed systems using{" "}
+                <span className="text-accent">TypeScript</span>, <span className="text-accent">Node.js</span>, <span className="text-accent">PostgreSQL</span>, and <span className="text-accent">AWS</span>.
               </p>
               
               <p>
-                My expertise lies in developing comprehensive property management systems that handle 
-                complex booking processes, dynamic pricing, payment processing, and owner/guest 
-                communication platforms. I'm passionate about creating efficient, user-friendly 
-                interfaces that make property management simpler and more profitable.
+                I've delivered SaaS platforms in production environments and collaborated with remote teams to launch features that reduced processing time by 90% and onboarding costs by 30%. My expertise includes developer tooling, event-driven architecture, and system design.
               </p>
               
               <p>
@@ -57,16 +61,15 @@ const About = () => {
                 <a href="https://devslane.com" className="text-primary hover:underline">
                   Devslane
                 </a>{" "}
-                where I lead development for property management solutions that serve multiple clients 
-                in the vacation rental and property management space.
+                where I architect vacation rental property management systems with multi-channel integrations, supporting 1M+ monthly transactions with 99.9% uptime.
               </p>
               
               <p>
-                I also recently co-founded{" "}
+                I also founded{" "}
                 <a href="https://lesgo.in" className="text-primary hover:underline">
-                  lesgo.in
+                  Lesgo
                 </a>{" "}
-                as a side project, where I've applied my property management expertise in a startup environment.
+                , a loyalty SaaS platform used by 25+ restaurants and 1,000+ users, where I built the backend with 99.8% uptime and optimized infrastructure to cut AWS costs by 25%.
               </p>
               
               <div className="flex items-center gap-2 mt-8 mb-4">

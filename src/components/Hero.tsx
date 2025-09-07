@@ -16,15 +16,14 @@ const Hero = () => {
           Pratham Kumar.
         </h2>
         <h3 className="text-3xl md:text-5xl lg:text-6xl font-bold text-slate mb-6 leading-tight">
-          I build <span className="gradient-text">property management</span> software.
+          I build <span className="gradient-text">scalable distributed systems</span>.
         </h3>
         <p className="max-w-xl text-slate text-lg mb-12 leading-relaxed">
-          I'm a software developer specializing in building exceptional
-          property management platforms similar to{" "}
-          <span className="text-accent">Airbnb</span>,{" "}
-          <span className="text-accent">VRBO</span>, and{" "}
-          <span className="text-accent">MBP</span>. Currently, I'm focused on building accessible,
-          human-centered products at{" "}
+          I'm a software engineer with 4 years of experience building scalable
+          distributed systems using{" "}
+          <span className="text-accent">TypeScript</span>,{" "}
+          <span className="text-accent">Node.js</span>, and{" "}
+          <span className="text-accent">AWS</span>. I specialize in vacation rental property management systems with expertise in event-driven architecture and system design at{" "}
           <a
             href="https://devslane.com"
             target="_blank"
