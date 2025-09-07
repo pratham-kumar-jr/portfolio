@@ -115,34 +115,9 @@ const Projects = () => {
         {/* Featured Projects */}
         <div className="space-y-24 mb-24">
           {featuredProjects.map((project, i) => (
-            <div
-              key={i}
-              className={cn(
-                "relative grid grid-cols-12 items-center gap-4",
-                i % 2 === 1 && "md:text-right"
-              )}
-            >
-              {/* Project Image or Placeholder */}
-              <div
-                className={cn(
-                  "col-span-12 md:col-span-7 relative rounded-md overflow-hidden",
-                  i % 2 === 0 ? "md:order-2" : "md:order-1"
-                )}
-              >
-                <div className="glass-card aspect-video flex items-center justify-center border border-accent/20">
-                  <div className="text-center font-mono text-accent/50">
-                    Project Screenshot
-                  </div>
-                </div>
-              </div>
-
+            <div key={i} className="mb-16">
               {/* Project Content */}
-              <div
-                className={cn(
-                  "col-span-12 md:col-span-6 md:col-start-1 md:row-start-1 z-10",
-                  i % 2 === 0 ? "md:text-left" : "md:col-start-7 md:text-right"
-                )}
-              >
+              <div className="col-span-12">
                 <div className="glass-card p-6 rounded-md shadow-xl">
                   <div className="flex items-center mb-2">
                     <p className="font-mono text-accent text-sm">
@@ -160,24 +135,14 @@ const Projects = () => {
                   <div className="text-slate rounded-md mb-4">
                     {project.description}
                   </div>
-                  <ul
-                    className={cn(
-                      "flex flex-wrap gap-2 text-xs font-mono text-slate-light mb-6",
-                      i % 2 === 1 && "md:justify-end"
-                    )}
-                  >
+                  <ul className="flex flex-wrap gap-2 text-xs font-mono text-slate-light mb-6">
                     {project.tags.map((tag, j) => (
                       <li key={j} className="bg-secondary px-3 py-1 rounded">
                         {tag}
                       </li>
                     ))}
                   </ul>
-                  <div
-                    className={cn(
-                      "flex gap-4",
-                      i % 2 === 1 && "md:justify-end"
-                    )}
-                  >
+                  <div className="flex gap-4">
                     {project.links.github && (
                       <a
                         href={project.links.github}
