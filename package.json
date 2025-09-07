@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://pratham-kumar-jr.github.io/dev-portfolio-explorer",
+  "homepage": "https://pratham-kumar-jr.github.io/portfolio",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
