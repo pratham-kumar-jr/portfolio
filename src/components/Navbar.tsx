@@ -66,7 +66,7 @@ const Navbar = () => {
             ))}
           </ol>
           <a
-            href="/_Pratham_kumar_2025_08_.pdf"
+            href="/portfolio/_Pratham_kumar_2025_08_.pdf"
             className="button-primary"
             download={"Pratham_Kumar_Resume"}
           >
@@ -109,7 +109,7 @@ const Navbar = () => {
           </ol>
           <div className="flex justify-center">
             <a
-              href="/_Pratham_kumar_2025_08_.pdf"
+              href="/portfolio/_Pratham_kumar_2025_08_.pdf"
               className="button-primary"
               download={"Pratham_Kumar_Resume"}
               onClick={(e) => {
@@ -121,7 +121,7 @@ const Navbar = () => {
           </div>
           <div className="flex justify-center gap-5 mt-8">
             <a
-              href="/_Pratham_kumar_2025_08_.pdf"
+              href="/portfolio/_Pratham_kumar_2025_08_.pdf"
               target="_blank"
               rel="noopener noreferrer"
               download={"Pratham_Kumar_Resume"}
