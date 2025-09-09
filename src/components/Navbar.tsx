@@ -66,9 +66,9 @@ const Navbar = () => {
             ))}
           </ol>
           <a
-            href="/portfolio/_Pratham_kumar_2025_08_.pdf"
+            href="https://drive.google.com/file/d/11Dw_mhppGWNHv1JIxBoSMgHIEwIflvRh/view?usp=drive_link"
             className="button-primary"
-            download={"Pratham_Kumar_Resume"}
+            target="_blank"
           >
             Resume
           </a>
@@ -109,9 +109,9 @@ const Navbar = () => {
           </ol>
           <div className="flex justify-center">
             <a
-              href="/portfolio/_Pratham_kumar_2025_08_.pdf"
+              href="https://drive.google.com/file/d/11Dw_mhppGWNHv1JIxBoSMgHIEwIflvRh/view?usp=drive_link"
               className="button-primary"
-              download={"Pratham_Kumar_Resume"}
+              target="_blank"
               onClick={(e) => {
                 setIsMenuOpen(false);
               }}
@@ -121,10 +121,9 @@ const Navbar = () => {
           </div>
           <div className="flex justify-center gap-5 mt-8">
             <a
-              href="/portfolio/_Pratham_kumar_2025_08_.pdf"
+              href="https://drive.google.com/file/d/11Dw_mhppGWNHv1JIxBoSMgHIEwIflvRh/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
-              download={"Pratham_Kumar_Resume"}
               className="text-slate hover:text-accent transition-colors"
             >
               <Github size={22} />
