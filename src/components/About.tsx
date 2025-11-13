@@ -49,12 +49,10 @@ const About = () => {
               </div>
 
               <p>
-                Hello! I'm Pratham, a software engineer with 4+ years of
-                experience building scalable distributed systems using{" "}
-                <span className="text-accent">TypeScript</span>,{" "}
-                <span className="text-accent">Node.js</span>,{" "}
-                <span className="text-accent">PostgreSQL</span>, and{" "}
-                <span className="text-accent">AWS</span>.
+                Hello! I'm Pratham, a backend & Distributed Systems Engineer
+                with 4.5 years of experience designing scalable pipelines,
+                cloud-native architectures, rule engines, performance-optimized
+                systems, and multi-node real-time communication layers
               </p>
 
               <p>

@@ -66,7 +66,7 @@ const Navbar = () => {
             ))}
           </ol>
           <a
-            href="https://drive.google.com/file/d/11Dw_mhppGWNHv1JIxBoSMgHIEwIflvRh/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1FbsF2wa70UPduTDvAchKSxFYdN4ojJkb/view?usp=sharing"
             className="button-primary"
             target="_blank"
           >
@@ -109,7 +109,7 @@ const Navbar = () => {
           </ol>
           <div className="flex justify-center">
             <a
-              href="https://drive.google.com/file/d/11Dw_mhppGWNHv1JIxBoSMgHIEwIflvRh/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1FbsF2wa70UPduTDvAchKSxFYdN4ojJkb/view?usp=sharing"
               className="button-primary"
               target="_blank"
               onClick={(e) => {
@@ -121,7 +121,7 @@ const Navbar = () => {
           </div>
           <div className="flex justify-center gap-5 mt-8">
             <a
-              href="https://drive.google.com/file/d/11Dw_mhppGWNHv1JIxBoSMgHIEwIflvRh/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1FbsF2wa70UPduTDvAchKSxFYdN4ojJkb/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="text-slate hover:text-accent transition-colors"

@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { Briefcase, Star } from "lucide-react";
@@ -17,32 +16,21 @@ const Experience = () => {
   const jobs: JobType[] = [
     {
       company: "Devslane",
-      title: "Software Engineer",
-      date: "May 2023 - Present",
+      title: "Backend / Software Engineer II (Distributed Systems)",
+      date: "August 2021 - Present",
       highlight: true,
       points: [
-        "Architected a vacation rental property management system with multi-channel integrations (e.g., Airbnb, Vrbo, BookingPal, etc), inventory sync, pricing automation, and tenant access.",
-        "Containerized applications using Docker and orchestrated deployments across environments, reducing setup time by 70%.",
-        "Enhanced API performance testing using K6, identifying bottlenecks and improving throughput by 52%.",
-        "Developed microservices with Spring Boot for specific modules, ensuring scalability and maintainability.",
-        "Built a multi-tenant AWS infrastructure supporting 1M+ monthly transactions, onboarding 3 clients with 99.9% uptime.",
-        "Designed event-driven ingestion pipeline (Node.js + Redis Streams + BullMQ), reducing data sync from 4 days to 3 hours.",
-        "Developed a high-performance Elasticsearch engine, improving retrieval by 80% and accuracy by 30%.",
-        "Designed dynamic line item billing system with custom formulas in multiple booking channels.",
-        "Worked and led teams between time zones using Slack + Jira; managed end-to-end feature delivery in line with stakeholders.",
-        "Mentored 5 junior engineers, improving team productivity by 50% through clean code reviews.",
-      ],
-    },
-    {
-      company: "Devslane",
-      title: "SDE Intern",
-      date: "Aug 2021 - May 2023",
-      highlight: true,
-      points: [
-        "Developed scalable REST APIs using Adonis.js and Redis, increasing system throughput by 75–80%.",
-        "Integrated Stripe to process $1M+ monthly transactions with secure billing flows.",
-        "Optimized front-end performance using React SSR, reducing load time by 40% and improving SEO.",
-        "Utilized Lucid ORM for structured database migrations and consistency of the model.",
+        "Architected a distributed ingestion pipeline using Redis Streams (consumer groups, partitioning, horizontal scaling) resulting in 56× improvement (7 days → 3 hours).",
+        "Designed multi-tenant AWS infrastructure (Lambda, API Gateway, S3, OpenSearch) handling 1M+ operations/month with high reliability.",
+        "Built a rule-based computation engine supporting custom formulas, chained dependencies, and conditional logic.",
+        "Implemented a multi-node websocket distribution layer using Redis Streams + Pub/Sub.",
+        "Built observability and metrics pipelines using OpenSearch/Grafana.",
+        "Enhanced API performance by 2–3× through K6 load testing, SQL query optimization, caching, and logical restructuring.",
+        "Improved engineering efficiency with CI/CD upgrades, deployment automation, and dev environment standardization.",
+        "Contributed to a RAG-based AI system, building retrieval pipelines, embeddings, and grounded response flows.",
+        "Delivered end-to-end technical specifications, integration flows, and solution designs.",
+        "Mentored interns, coordinated tasks, participated in architecture discussions, and ran client-facing requirement",
+        "Contributed as one of the early backend engineers, owning critical modules and production systems from the start.",
       ],
     },
     {
@@ -64,11 +52,15 @@ const Experience = () => {
         <h2 className="section-heading numbered-heading mb-12">
           Where I've Worked
         </h2>
-        
+
         <div className="flex items-center gap-2 mb-6">
           <Briefcase className="text-accent" />
           <p className="text-slate-light italic">
-            Specialized in <span className="text-accent font-medium">property management software</span> similar to Airbnb, VRBO and MBP
+            Specialized in{" "}
+            <span className="text-accent font-medium">
+              property management software
+            </span>{" "}
+            similar to Airbnb, VRBO and MBP
           </p>
         </div>
 
@@ -87,7 +79,9 @@ const Experience = () => {
                   )}
                   onClick={() => setActiveTabIndex(i)}
                 >
-                  {job.highlight && <Star className="w-3 h-3 text-accent opacity-75" />}
+                  {job.highlight && (
+                    <Star className="w-3 h-3 text-accent opacity-75" />
+                  )}
                   {job.company}
                 </button>
               ))}
